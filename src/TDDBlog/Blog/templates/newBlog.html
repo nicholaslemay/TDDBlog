@@ -1,0 +1,7 @@
+
+<form action="{%url newBlog%}" method="post">
+{% csrf_token %}
+	<input type="text" id="id_title"></input>
+	<input type="text" id="id_content"></input>
+	<button id="id_create_blog_post">Submit</button>
+</form>

@@ -81,11 +81,7 @@ MIDDLEWARE_CLASSES = (
 
 ROOT_URLCONF = 'TDDBlog.urls'
 
-TEMPLATE_DIRS = (ROOT_PATH + "Blog/templates",
-                 
-)
-import sys
-print sys.path
+TEMPLATE_DIRS = (ROOT_PATH + "Blog/templates",)
 
 INSTALLED_APPS = (
     'django.contrib.auth',
@@ -96,6 +92,7 @@ INSTALLED_APPS = (
     'django.contrib.admin',
     'django_nose',
     'TDDBlog.Blog',
+    'lettuce.django'
 )
 
 TEST_RUNNER= 'django_nose.NoseTestSuiteRunner'

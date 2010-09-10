@@ -1,7 +1,7 @@
 from nose.tools import istest
 from django.test.testcases import TestCase
-from externalLibraries.FluentSelenium.SharedSeleniumExecutionContext import SharedSeleniumExecutionContext
-from externalLibraries.FluentSelenium.SeleniumDrivenUser import SeleniumDrivenUser
+from TDDBlog.externalLibraries.FluentSelenium.SharedSeleniumExecutionContext import SharedSeleniumExecutionContext
+from TDDBlog.externalLibraries.FluentSelenium.SeleniumDrivenUser import SeleniumDrivenUser
 from TDDBlog.testSettings import SELENIUM_HOST, SELENIUM_PORT,\
     SELENIUM_BROWSER_START_COMMAND, TEST_HOST
 from TDDBlog.Blog.tests.acceptanceTests import BlogLocators
