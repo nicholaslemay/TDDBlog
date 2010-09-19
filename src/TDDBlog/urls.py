@@ -1,9 +1,17 @@
-from django.conf.urls.defaults import *
+from django.conf.urls.defaults import patterns
 
-# Uncomment the next two lines to enable the admin:
-# from django.contrib import admin
-# admin.autodiscover()
+from routes.mapper import Mapper
+from TDDBlog.Blog.blogRoutes import blogRoutes
+from TDDBlog.helpers.urlRouting.URLRouter import URLRouter
+from routes import request_config
+
+
+
+map = Mapper()
+map.extend(blogRoutes)
+
+urlRouter = URLRouter(map)
 
 urlpatterns = patterns('',
-                         (r'^blog/', include('TDDBlog.Blog.blogUrls')),
+                         (r'.*', urlRouter.routeRequestToProperController )
                        )

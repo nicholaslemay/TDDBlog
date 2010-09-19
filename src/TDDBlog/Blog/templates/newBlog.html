@@ -1,5 +1,6 @@
+{% load routingTags %}
 
-<form action="{%url newBlog%}" method="post">
+<form action="{%get_url_for createBlog%}" method="post">
 {% csrf_token %}
 	<input type="text" id="id_title"></input>
 	<input type="text" id="id_content"></input>

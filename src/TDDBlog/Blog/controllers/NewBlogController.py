@@ -1,16 +1,14 @@
 from TDDBlog.Helpers.Controller import Controller
-from django.http import HttpResponse
-from django.shortcuts import render_to_response, redirect
 from django.core.urlresolvers import reverse
-from django.views.decorators.csrf import csrf_protect
+from django.shortcuts import render_to_response, redirect
 from django.template.context import RequestContext
 
-class NewBlogPostController(Controller):
+class BlogPostController(Controller):
     
     @staticmethod
-    def GET(request):
+    def new(request):
         return render_to_response("newBlog.html", context_instance=RequestContext(request))
     
     @staticmethod
-    def POST(request):
+    def create(request):
         return redirect(reverse("thankYou"), context_instance=RequestContext(request))
